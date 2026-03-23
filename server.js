@@ -9,6 +9,8 @@ const PORT = 3000
 app.use(cors())
 app.use(express.json())
 
+// Routes
+
 // Test route
 app.get('/', (req, res) => {
     res.json({ message: 'QuizBlitz server is running' })
