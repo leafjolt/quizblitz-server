@@ -38,7 +38,7 @@ app.get('/api/questions/random', (req, res) => {
 
 // POST /api/scores — submit a new score
 app.post('/api/scores', async (req, res) => {
-    const { playerName, score, totalQuestions } = req.body
+    const { playerName, score, totalQuestions } = req.body || {}
 
     if (!playerName || score === undefined || !totalQuestions) {
         return res.status(400).json({ error: 'playerName, score, and totalQuestions are required' })
