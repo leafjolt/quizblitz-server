@@ -1,1 +1,2 @@
+--- Phase 3, Milestone 4 ---
 [Claude Sonnet 4.6] I have this code for pushing scores. If the user doesn't pass in the correct body JSON then I want error 400, but instead I'm getting error 500 when testing the route with a blank body in Thunder Client because of a destructuring issue.
