@@ -13,7 +13,13 @@ const app = express()
 const PORT = 3000
 
 // Middleware
-app.use(cors())
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://leafjolt.github.io'
+]
+app.use(cors({
+  origin: allowedOrigins
+}))
 app.use(express.json())
 
 // Routes
